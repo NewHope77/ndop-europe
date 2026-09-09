@@ -3,7 +3,7 @@
 Static website for the movement encouraging the establishment of a National Day of
 Prayer at the state level in every European country.
 
-**Live demo:** https://paulsmagaz-ship-it.github.io/ndop-europe/
+**Live demo:** https://newhope77.github.io/ndop-europe/
 
 ---
 

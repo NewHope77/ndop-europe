@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 PAGES = SRC / "pages"
-SITE_URL = "https://paulsmagaz-ship-it.github.io/ndop-europe/"
+SITE_URL = "https://newhope77.github.io/ndop-europe/"
 
 
 def parse(text):

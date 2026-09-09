@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paulsmagaz-ship-it.github.io/ndop-europe/sitemap.xml
+Sitemap: https://newhope77.github.io/ndop-europe/sitemap.xml
