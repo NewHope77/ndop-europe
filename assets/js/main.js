@@ -163,12 +163,12 @@
         data.get('message') || ''
       ].join('\n');
 
-      var href = 'mailto:orlovitaliy@gmail.com'
+      var href = 'mailto:info@ndop-europe.org'
         + '?subject=' + encodeURIComponent('National Days of Prayer Movement — enquiry from ' + (data.get('name') || 'the website'))
         + '&body=' + encodeURIComponent(body);
 
       window.location.href = href;
-      status.textContent = 'Opening your email client… If nothing happens, write directly to orlovitaliy@gmail.com.';
+      status.textContent = 'Opening your email client… If nothing happens, write directly to info@ndop-europe.org.';
       status.classList.add('is-visible');
     });
   }

@@ -1,7 +1,7 @@
 # The National Days of Prayer Movement in Europe
 
 Static website for the movement encouraging the establishment of a National Day of
-Prayer at the state level in every European country.
+Prayer at the country level in every European country.
 
 **Live demo:** https://newhope77.github.io/ndop-europe/
 
@@ -12,12 +12,11 @@ Prayer at the state level in every European country.
 | Page | File | Contents |
 |---|---|---|
 | Home | `index.html` | Hero, mission, benefits (society / state / churches), history preview, the Ukrainian precedent, call to action |
-| About Us | `about.html` | Who the movement is, its principles, what it does, coordinator |
-| History | `history.html` | 13-moment timeline, 1571 → 2026, with a lightbox for every image |
+| About Us | `about.html` | Who the movement is, its principles, what it does, the International Board |
+| History | `history.html` | 12-moment timeline, 1571 → 2026, with a lightbox for every image |
 | Resources & Legal Base | `resources.html` | US precedents and Public Law 100-307, Ukraine's 2025 resolution, the seven practical steps, downloads |
 | FAQ | `faq.html` | 10-question accordion |
-| Prayer Marathon 28/30 | `marathon.html` | Interactive map of 30 nations over 28 days, with filters, search and a detail panel |
-| Contact | `contact.html` | Coordinator details, audience-specific notes, enquiry form |
+| Contact | `contact.html` | Board contact, audience-specific notes, enquiry form |
 
 All content, imagery and the colour palette come from the movement's own brochure
 (`assets/docs/ndop-in-europe-brochure.pdf`). Site language is **English only**.
@@ -35,16 +34,21 @@ Taken directly from the printed brochure:
 Fully responsive (mobile / tablet / desktop), keyboard accessible, with
 `prefers-reduced-motion` respected.
 
-## The interactive map
+## Frozen: Prayer Marathon 28/30
 
-`assets/js/marathon.js` plots each nation from its real latitude/longitude onto a
-Mercator projection. The brochure's Europe map sits behind it as an `<image>`
-whose placement was derived by measuring the brochure map's own projection
-(Iceland and the Iberian peninsula as control points), so the markers land on the
-correct country without shipping a country-outline dataset.
+The Prayer Marathon page is **frozen at the client's request** (brief of
+2026-09-24, item 4.1) and is not built or linked anywhere. Nothing was deleted:
 
-If you change the projection bounds in `marathon.js`, update the `<image>`
-geometry in `src/pages/marathon.html` to match.
+- page source — `src/frozen/marathon.html`
+- map module — `assets/js/marathon.js`
+- styles — the `Prayer Marathon 28/30` block in `assets/css/style.css`
+
+To bring it back: move the page to `src/pages/`, restore the nav and footer links
+in `src/layout.html`, correct the figures in the `DATA` array, and rebuild. The
+map plots each nation from its real latitude/longitude onto a Mercator
+projection, with the brochure's Europe map behind it as an `<image>` placed by
+measuring that map's own projection — so if you change the projection bounds in
+`marathon.js`, update the `<image>` geometry in the page to match.
 
 ## Multilingual readiness
 
@@ -84,11 +88,26 @@ present so that Jekyll does not touch the assets.
 
 ## Content still to be supplied by the movement
 
-- **Prayer Marathon 28/30** — the day assignments, per-country prayer focuses and
-  initiative statuses in `assets/js/marathon.js` are illustrative placeholders
-  built to the right shape. Replace the `DATA` array with the real schedule.
+- **Board members' names.** `about.html` lists six board seats by country and
+  remit (United States, Poland, Germany, Austria, Ukraine, United Kingdom) with
+  no personal names, since none were supplied. Add each name where its seat is
+  described, once the member has agreed to be named.
+- **Corporate email address.** `info@ndop-europe.org` is a placeholder used in
+  the page copy, the footer, the JSON-LD block and `assets/js/main.js`. Register
+  the movement's own domain and replace it in those four places.
 - **Contact form** — it currently opens the visitor's email client (`mailto:`), so
   the site needs no backend. Point it at Formspree, Netlify Forms or a small
   endpoint when server-side delivery is wanted.
 - Higher-resolution originals of the brochure photographs, if available; the
   images here were extracted from the PDF and are limited to its print resolution.
+
+## Changes from the brief of 2026-09-24
+
+1.1 circle of twelve stars added to the blue banner of every page · 2.1 the navy
+figures strip after the mission removed · 2.2 "at the state level" replaced
+throughout with "at the country level" · 3.1 the 1588 Spanish Armada story
+removed in full · 3.2 every remaining history entry expanded, with the US
+federal / individual-state distinction spelled out · 3.3 Ukraine's first
+observance in 2025 noted alongside the first intergovernmental service in 2026 ·
+4.1 Prayer Marathon frozen · 4.2 the principles block laid out 3 x 2 · 5.1 all
+personal names and phone numbers removed · 5.2 International Board block added.
