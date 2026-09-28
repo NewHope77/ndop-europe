@@ -9,6 +9,7 @@ root, where GitHub Pages serves it. No dependencies, no toolchain.
     python3 build.py
 """
 
+import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -27,8 +28,17 @@ def parse(text):
     return meta, body.strip()
 
 
+def fingerprint(layout):
+    """Append a content hash to the CSS/JS URLs so a redeploy is never served
+    from a stale browser cache."""
+    for asset in ("assets/css/style.css", "assets/js/i18n.js", "assets/js/main.js"):
+        digest = hashlib.md5((ROOT / asset).read_bytes()).hexdigest()[:8]
+        layout = layout.replace('"%s"' % asset, '"%s?v=%s"' % (asset, digest))
+    return layout
+
+
 def main():
-    layout = (SRC / "layout.html").read_text(encoding="utf-8")
+    layout = fingerprint((SRC / "layout.html").read_text(encoding="utf-8"))
     built = []
 
     for page in sorted(PAGES.glob("*.html")):
