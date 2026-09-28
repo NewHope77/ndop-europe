@@ -107,6 +107,7 @@
       lastFocused = document.activeElement;
       lbImg.src = src;
       lbImg.alt = alt || '';
+      lbImg.hidden = false;
       lbCap.textContent = caption || '';
       lightbox.classList.add('is-open');
       document.body.style.overflow = 'hidden';
