@@ -15,6 +15,31 @@
     if (current) current.setAttribute('aria-current', 'page');
   }
 
+  /* ---------- Light / dark theme ----------
+     The inline script in <head> has already applied the stored choice, so all
+     that is left here is the switch itself. Light is the default. */
+  var themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    var meta = document.getElementById('themeColor');
+    var GROUND = { light: '#0C335B', dark: '#0D1822' };
+
+    var render = function (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+      themeToggle.setAttribute('aria-label',
+        theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      if (meta) meta.setAttribute('content', GROUND[theme]);
+    };
+
+    render(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+    themeToggle.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      render(next);
+      try { localStorage.setItem('ndop.theme', next); } catch (e) { /* private mode */ }
+    });
+  }
+
   /* ---------- Mobile navigation ---------- */
   var toggle = document.getElementById('navToggle');
   var nav = document.getElementById('primaryNav');

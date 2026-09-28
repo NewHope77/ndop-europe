@@ -34,6 +34,29 @@ Taken directly from the printed brochure:
 Fully responsive (mobile / tablet / desktop), keyboard accessible, with
 `prefers-reduced-motion` respected.
 
+### Light and dark themes
+
+The header carries a sun/moon toggle. **Light is the default** — it is the
+brand look from the brochure — and a visitor's choice is remembered in
+`localStorage` under `ndop.theme`. An inline script in `<head>` applies the
+stored theme before the page paints, so a dark-theme visitor never sees a white
+flash between pages.
+
+Only design tokens change between themes; no component is restyled. The light
+set lives on `:root` in `assets/css/style.css`, the dark set on
+`:root[data-theme="dark"]` directly below it. Two rules matter when editing:
+
+- `--navy` is a **surface** colour (hero, banners, footer). Heading *text* uses
+  `--heading`, which flips to near-white in dark. Never colour text with
+  `--navy`.
+- Card and panel backgrounds use `--surface`, not a literal `#fff`. The only
+  deliberate exceptions are the framed document scans, which stay on white
+  paper in both themes so they remain readable.
+
+To make the site follow the visitor's OS setting instead of defaulting to
+light, add a `prefers-color-scheme` check to the inline script in
+`src/layout.html`.
+
 ## Frozen: Prayer Marathon 28/30
 
 The Prayer Marathon page is **frozen at the client's request** (brief of
