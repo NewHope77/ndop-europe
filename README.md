@@ -3,7 +3,7 @@
 Static website for the movement encouraging the establishment of a National Day of
 Prayer at the country level in every European country.
 
-**Live demo:** https://newhope77.github.io/ndop-europe/
+**Live demo:** https://nationaldayofprayer.eu/
 
 ---
 
@@ -108,6 +108,27 @@ python3 -m http.server 8811
 
 GitHub Pages serves the repository root on every push to `main`. `.nojekyll` is
 present so that Jekyll does not touch the assets.
+
+**Custom domain:** `nationaldayofprayer.eu`, set by the `CNAME` file at the repo
+root. Keep that file — a rebuild does not recreate it. The domain is registered
+through imena.ua, and the DNS records it needs are:
+
+| Type | Host | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `newhope77.github.io.` |
+
+`prayforeurope.eu` is the movement's second domain and should be set to a 301
+redirect to `nationaldayofprayer.eu` at the registrar, not pointed at Pages —
+two domains serving the same pages would read as duplicates to search engines.
+
+Once DNS resolves, turn on **Enforce HTTPS** in the repository's Pages settings;
+GitHub issues the certificate itself, which takes a few minutes after the
+records propagate. `SITE_URL` in `build.py` drives the canonical URLs, the
+sitemap and robots.txt, so it must match the live domain.
 
 ## Content still to be supplied by the movement
 

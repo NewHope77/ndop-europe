@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://newhope77.github.io/ndop-europe/sitemap.xml
+Sitemap: https://nationaldayofprayer.eu/sitemap.xml
