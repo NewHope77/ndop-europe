@@ -1,0 +1,116 @@
+{
+  "title": "About Us — The National Days of Prayer Movement in Europe",
+  "description": "Who we are, what we believe and how the National Days of Prayer Movement works to establish a National Day of Prayer at the country level in every European country.",
+  "heroTitle": "About the Movement",
+  "heroLede": "A continent-wide initiative encouraging every European nation to set aside one day, in law, on which its people may pray together for their country.",
+  "introImage": "assets/img/hero-europe-cross.jpg",
+  "introAlt": "Generations of Europeans united in prayer across the continent",
+  "introEyebrow": "Who we are",
+  "introTitle": "A movement, not an institution",
+  "introLead": "The National Days of Prayer Movement in Europe brings together churches, religious communities, public figures and ordinary citizens around a single, simple aim.",
+  "introParagraphs": [
+    "We are not a denomination, a political party or a lobby group. We are a network of people convinced that the peoples of Europe are strengthened when they are able to pray together for their nations — and that a National Day of Prayer, recognised by the state, gives that prayer a shared date, a shared voice and a lasting place in public life.",
+    "Our work is interdenominational by conviction. In every country the initiative belongs to the local churches, communities and leaders of that nation; the movement offers the experience, the precedents and the practical framework that others have already tested."
+  ],
+  "valuesEyebrow": "What guides us",
+  "valuesTitle": "Principles of the movement",
+  "values": [
+    {
+      "title": "Prayer first",
+      "text": "Everything the movement does begins and ends with prayer for the nations of Europe — for their freedom, their peace and their common good.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><path d=\"M16 4v24M8 11h16\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "title": "Unity across confessions",
+      "text": "The initiative is open to all Christian confessions and, where nations choose it, to interfaith participation. Unity is the point, not uniformity.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"12\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.7\"/><circle cx=\"21\" cy=\"12\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.7\" opacity=\".55\"/><path d=\"M4 27c0-3.9 3.1-7 7-7s7 3.1 7 7M18 21c1-.7 2-1 3-1 3.9 0 7 3.1 7 7\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "title": "Respect for the state",
+      "text": "We work through lawful, transparent parliamentary and governmental procedure, with full respect for constitutional order and freedom of religion.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 26V9l10-5 10 5v17\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><path d=\"M3 26h26M13 26v-7h6v7\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "title": "National ownership",
+      "text": "Each National Day of Prayer belongs to its own nation — its date, its form and its language are decided locally, by local leaders.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"16\" cy=\"16\" r=\"12\" stroke=\"currentColor\" stroke-width=\"1.7\"/><path d=\"M4 16h24M16 4c3.5 4 3.5 20 0 24M16 4c-3.5 4-3.5 20 0 24\" stroke=\"currentColor\" stroke-width=\"1.4\"/></svg>"
+    },
+    {
+      "title": "Service to society",
+      "text": "A day of prayer is also a day of charity, compassion and service — its fruit is measured in the life of communities.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><path d=\"M16 28s11-6.8 11-14a11 11 0 10-22 0c0 7.2 11 14 11 14z\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><circle cx=\"16\" cy=\"14\" r=\"3.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>"
+    },
+    {
+      "title": "Open coordination",
+      "text": "Materials, legal precedents and contacts are shared freely with anyone ready to carry the initiative in their country.",
+      "icon": "<svg class=\"value__icon\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 8h22v16H5z\" stroke=\"currentColor\" stroke-width=\"1.7\"/><path d=\"M5 8l11 8 11-8\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/></svg>"
+    }
+  ],
+  "doEyebrow": "What we do",
+  "doTitle": "From an idea to a day in the national calendar",
+  "doSections": [
+    {
+      "title": "We gather and share the evidence",
+      "paragraphs": [
+        "Europe’s history holds many moments in which united prayer preceded decisive change. The movement documents these stories, together with the legal texts and parliamentary procedures that turned a day of prayer into law in the United States and in Ukraine."
+      ]
+    },
+    {
+      "title": "We connect people across borders",
+      "paragraphs": [
+        "The movement introduces church leaders, parliamentarians and civic initiators to counterparts who have already walked this road, so that no national committee has to begin from a blank page."
+      ]
+    },
+    {
+      "title": "We accompany national initiatives",
+      "paragraphs": [
+        "From the first interdenominational meeting to the drafting of a legislative proposal and the celebration of the first National Day of Prayer, the movement offers a seven-step framework tested in practice."
+      ]
+    }
+  ],
+  "doBullets": [
+    "Support in forming an interdenominational steering committee.",
+    "Model documents, vision papers and legislative language.",
+    "Guidance on engaging government and national leaders.",
+    "Materials for the first national celebration."
+  ],
+  "doButton": "See the seven practical steps",
+  "boardEyebrow": "Our board",
+  "boardTitle": "The International Board",
+  "boardLede": "The movement is guided by an international board drawn from across Europe and from the United States, where a National Day of Prayer has been established in law since 1988. Each member carries the initiative in their own country and answers for it there.",
+  "board": [
+    {
+      "country": "United States",
+      "role": "Chair of the Board",
+      "text": "Brings the experience of Public Law 100-307 and of a National Day of Prayer observed annually since 1988."
+    },
+    {
+      "country": "Poland",
+      "role": "Board Member — Central Europe",
+      "text": "Coordinates with churches and parliamentarians across Poland, Czechia, Slovakia and Hungary."
+    },
+    {
+      "country": "Germany",
+      "role": "Board Member — Western Europe",
+      "text": "Heir to the Leipzig Peace Prayers; works with the German-speaking churches and with the European institutions."
+    },
+    {
+      "country": "Austria",
+      "role": "Board Member — Interconfessional Relations",
+      "text": "Responsible for dialogue between Catholic, Orthodox and Protestant communities within the movement."
+    },
+    {
+      "country": "Ukraine",
+      "role": "Board Member — Legal Precedent",
+      "text": "Accompanied the 2025 resolution of the Verkhovna Rada and advises national committees on legislative procedure."
+    },
+    {
+      "country": "United Kingdom",
+      "role": "Board Member — Northern Europe",
+      "text": "Works with churches and public institutions across the British Isles and the Nordic countries."
+    }
+  ],
+  "boardNote": "Board members are confirmed country by country, and each name is published with that member’s consent. For correspondence with the board as a whole, write to <a href=\"mailto:info@nationaldayofprayer.eu\">info@nationaldayofprayer.eu</a>.",
+  "pullQuote": "These stories represent only a small part of Europe’s rich spiritual heritage. <b>Every nation can recall moments</b> when, in times of uncertainty, people united in prayer and witnessed events that shaped the destiny of their society.",
+  "pullQuoteCite": "From the movement’s brochure"
+}

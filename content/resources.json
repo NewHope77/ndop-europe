@@ -1,0 +1,108 @@
+{
+  "title": "Resources & Legal Base — National Days of Prayer",
+  "description": "The legal precedents behind National Days of Prayer in the United States and Ukraine, and seven practical steps for establishing a National Day of Prayer at the country level.",
+  "heroTitle": "Legal base &amp; practical resources",
+  "heroLede": "Two nations have already written a National Day of Prayer into law. Their texts, their procedure and their experience are available to every European country that wishes to follow.",
+  "usEyebrow": "Precedent I",
+  "usTitle": "National Days of Prayer in the United States",
+  "usImage": "assets/img/us-flag.jpg",
+  "usAlt": "The flag of the United States",
+  "usParagraphs": [
+    "The American tradition of national prayer reaches back to the founding of the republic itself, and was confirmed repeatedly at the most difficult hours of the nation’s history.",
+    "One distinction matters for European readers. The United States is a federation: alongside the national government there are fifty individual states, each with its own legislature. The National Day of Prayer is <b>federal</b> — it is set by Act of Congress and proclaimed by the President for the whole country. Individual states and cities issue proclamations of their own, but they do so in addition to the national day, not instead of it.",
+    "That is the level at which the European movement works: one day, established for the whole country, by the country’s own parliament or head of state."
+  ],
+  "usDates": [
+    {
+      "date": "20 July 1775",
+      "text": "The Continental Congress issued a proclamation recommending observance of “a day of public repentance before God, fasting, and prayer.”"
+    },
+    {
+      "date": "1795",
+      "text": "George Washington proclaimed a day of public thanksgiving and prayer."
+    },
+    {
+      "date": "9 May 1798",
+      "text": "John Adams proclaimed a “day of solemn repentance, fasting, and prayer.”"
+    },
+    {
+      "date": "3 March 1863",
+      "text": "Abraham Lincoln signed a congressional resolution during the Civil War calling for a day of fasting and prayer on 30 April 1863."
+    },
+    {
+      "date": "4 July 1952",
+      "text": "President Harry S. Truman proclaimed a National Day of Prayer, observed from that year onwards."
+    }
+  ],
+  "lawEyebrow": "The signing",
+  "lawTitle": "Public Law 100-307",
+  "lawImage": "assets/img/reagan-signing.jpg",
+  "lawAlt": "President Ronald Reagan signing Public Law 100-307 on 5 May 1988",
+  "lawBadgeDate": "05.05.1988",
+  "lawBadgeText": "Public Law 100-307",
+  "lawParagraphs": [
+    "US President Ronald Reagan designated the first Thursday of May as the National Day of Prayer. On this day, US citizens can turn to God in prayer and reflection in churches, in groups and individually.",
+    "The act amended the earlier 1952 joint resolution, replacing “a suitable day each year, other than a Sunday” with a fixed annual date — the first Thursday in May — giving the observance a permanent and predictable place in the national calendar.",
+    "The change was small in legal terms and decisive in practice. A movable date had left each year’s observance dependent on a fresh presidential decision; a fixed date allowed churches, communities and civic organisations to plan a year ahead, and turned a proclamation into an institution. Every president since has issued the proclamation, and the day is now marked in all fifty states.",
+    "For a European parliament considering the same step, the American file is useful precisely because it is short: a single page of statute, amending an earlier resolution, with no financial obligation on the state and no compulsion on any citizen."
+  ],
+  "lawScanImage": "assets/img/public-law-100-307.jpg",
+  "lawScanAlt": "The text of Public Law 100-307, 102 Stat. 456",
+  "lawScanCaption": "Public Law 100-307, 100th Congress — approved 5 May 1988",
+  "uaEyebrow": "Precedent II",
+  "uaTitle": "The National Day of Prayer in Ukraine",
+  "uaImage": "assets/img/rada-resolution.jpg",
+  "uaAlt": "Resolution of the Verkhovna Rada of Ukraine on establishing the National Day of Prayer",
+  "uaCaption": "Resolution of the Verkhovna Rada of Ukraine, 12 February 2025 — establishing the National Day of Prayer",
+  "uaBadgeDate": "12.02.2025",
+  "uaBadgeText": "Verkhovna Rada of Ukraine",
+  "uaLead": "Ukraine is the first country in Europe where a law was passed, on 12 February 2025, providing for <b>24 February — The National Day of Prayer</b>.",
+  "uaParagraphs": [
+    "The resolution of the Verkhovna Rada establishes the day as an annual national observance, recognising the role of prayer in strengthening the spiritual unity of Ukrainian society and expressing respect for the country’s religious heritage and freedom of conscience.",
+    "The date carries its own meaning: 24 February marks the beginning of the full-scale invasion — a day that has become, for millions, a day of remembrance, resilience and prayer for peace.",
+    "The day was first observed on 24 February 2025, within days of the resolution being adopted. On its second observance, in 2026, it drew heads of state and government from across Europe to St. Sophia Cathedral in Kyiv — the first official, intergovernmental prayer service of its kind on the continent."
+  ],
+  "uaButton": "The first observance in Kyiv, 2026",
+  "stepsEyebrow": "The framework",
+  "stepsTitle": "Seven practical steps for establishing a National Day of Prayer at the country level",
+  "stepsLede": "The road from a first conversation to a date in the national calendar has been walked before. These seven steps summarise what has worked in practice.",
+  "steps": [
+    "Unite churches and religious communities around the initiative",
+    "Form an interdenominational steering committee",
+    "Develop the vision and supporting framework",
+    "Engage government and national leaders",
+    "Prepare a legislative proposal",
+    "Secure official recognition of the National Day of Prayer",
+    "Celebrate the first National Day of Prayer"
+  ],
+  "downloadsEyebrow": "Materials",
+  "downloadsTitle": "Downloads",
+  "downloadsLede": "Materials for church leaders, steering committees and parliamentary initiators. Additional documents are provided on request.",
+  "downloads": [
+    {
+      "tag": "PDF · 24 pages",
+      "title": "The Movement’s brochure",
+      "text": "The full presentation of the movement: history, legal base, benefits and the seven practical steps, with illustrations.",
+      "link": "assets/docs/ndop-in-europe-brochure.pdf",
+      "linkLabel": "Download PDF"
+    },
+    {
+      "tag": "On request",
+      "title": "Model legislative proposal",
+      "text": "A template resolution text, based on the Ukrainian and American precedents, adaptable to national parliamentary procedure.",
+      "link": "contact.html#join",
+      "linkLabel": "Request the template"
+    },
+    {
+      "tag": "On request",
+      "title": "Steering committee starter pack",
+      "text": "Guidance on forming an interdenominational committee, sample agendas, and a checklist for the first national observance.",
+      "link": "contact.html#join",
+      "linkLabel": "Request the pack"
+    }
+  ],
+  "ctaEyebrow": "Next step",
+  "ctaTitle": "Ready to begin in your country?",
+  "ctaText": "Tell us which nation you represent and we will connect you with those who have already taken this road.",
+  "ctaButton": "Contact the board"
+}

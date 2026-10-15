@@ -1,0 +1,42 @@
+{
+  "title": "Contact Us — The National Days of Prayer Movement in Europe",
+  "description": "Contact the National Days of Prayer Movement in Europe. Enquiries from churches, religious communities, parliamentarians, public institutions and media.",
+  "heroTitle": "Contact us",
+  "heroLede": "Whether you represent a church, a religious community, a public institution or a group of citizens — we would be glad to hear from you.",
+  "cardEyebrow": "Write to the movement",
+  "cardTitle": "International Board",
+  "cardRole": "The National Days of Prayer Movement in Europe",
+  "cardBoardLink": "Members of the International Board",
+  "cardNote": "Correspondence is handled by the board of the country concerned. Please write in English, or in the language of that country.",
+  "blocks": [
+    {
+      "title": "For churches and religious communities",
+      "text": "We help form interdenominational steering committees, share materials for a first national gathering, and connect you with communities in other countries that have already begun."
+    },
+    {
+      "title": "For parliamentarians and public institutions",
+      "text": "We provide the legal precedents — Public Law 100-307 in the United States and the 2025 resolution of the Verkhovna Rada of Ukraine — together with model legislative language adaptable to national procedure."
+    }
+  ],
+  "mediaTitle": "For media",
+  "mediaText": "Photographs, the movement’s brochure and interview requests: please write to <a href=\"mailto:info@nationaldayofprayer.eu\">info@nationaldayofprayer.eu</a> with “Media” in the subject line.",
+  "mediaDownload": "Download the brochure",
+  "formEyebrow": "Join the movement",
+  "formTitle": "Write to us",
+  "labelName": "Your name",
+  "labelEmail": "Email",
+  "labelCountry": "Country",
+  "labelRole": "I am writing as",
+  "labelMessage": "Message",
+  "roleOptions": [
+    "A church or religious community",
+    "A parliamentarian or public official",
+    "A civic initiative or NGO",
+    "An individual",
+    "Media"
+  ],
+  "formButton": "Send message",
+  "formNote": "Your message opens in your email client addressed to the movement’s board. Nothing is stored on this website.",
+  "pullQuote": "A National Day of Prayer offers an opportunity for millions of people to unite in seeking God’s guidance, praying for peace, wisdom for leaders, <b>protection for their nations</b>, and blessings for future generations.",
+  "pullQuoteCite": "The National Days of Prayer Movement in Europe"
+}

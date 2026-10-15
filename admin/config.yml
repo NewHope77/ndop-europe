@@ -1,0 +1,297 @@
+# Editing interface for the movement's site.
+#
+# Everything the client can change lives in content/*.json. Saving here commits
+# to the repository, which rebuilds and republishes the site automatically.
+# Structure, styling and layout are deliberately not editable from here.
+
+backend:
+  name: github
+  repo: NewHope77/ndop-europe
+  branch: main
+
+media_folder: assets/img
+public_folder: assets/img
+
+publish_mode: simple
+locale: en
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home page
+        file: content/index.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroEyebrow, label: "Banner — small line above the title", widget: string }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroVerse, label: "Banner — Bible verse", widget: text }
+          - { name: heroCite, label: "Banner — verse reference", widget: string }
+          - { name: heroCta1, label: "Banner — first button", widget: string }
+          - { name: heroCta2, label: "Banner — second button", widget: string }
+          - { name: missionEyebrow, label: "Mission — small line", widget: string }
+          - { name: missionText, label: "Mission — text", widget: text }
+          - { name: benefitsEyebrow, label: "Benefits — small line", widget: string }
+          - { name: benefitsTitle, label: "Benefits — title", widget: string }
+          - { name: benefitsLede, label: "Benefits — intro", widget: text }
+          - { name: societyTitle, label: "Column 1 — title", widget: string }
+          - { name: societyItems, label: "Column 1 — points", widget: list, field: { name: item, label: Point, widget: string } }
+          - { name: stateTitle, label: "Column 2 — title", widget: string }
+          - { name: stateItems, label: "Column 2 — points", widget: list, field: { name: item, label: Point, widget: string } }
+          - { name: churchTitle, label: "Column 3 — title", widget: string }
+          - { name: churchItems, label: "Column 3 — points", widget: list, field: { name: item, label: Point, widget: string } }
+          - { name: historyEyebrow, label: "History preview — small line", widget: string }
+          - { name: historyTitle, label: "History preview — title", widget: string }
+          - { name: historyLede, label: "History preview — intro", widget: text }
+          - name: cards
+            label: "History preview — cards"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: image, label: Photograph, widget: image }
+              - { name: alt, label: "Photograph description (for screen readers)", widget: string }
+              - { name: year, label: Year, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: link, label: Link, widget: string }
+              - { name: linkLabel, label: "Link text", widget: string }
+          - { name: historyCta, label: "Button under the cards", widget: string }
+          - { name: ukraineEyebrow, label: "Ukraine — small line", widget: string }
+          - { name: ukraineTitle, label: "Ukraine — title", widget: string }
+          - { name: ukraineImage, label: "Ukraine — image", widget: image }
+          - { name: ukraineAlt, label: "Ukraine — image description", widget: string }
+          - { name: ukraineBadgeDate, label: "Ukraine — badge date", widget: string }
+          - { name: ukraineBadgeText, label: "Ukraine — badge text", widget: string }
+          - { name: ukraineP1, label: "Ukraine — first paragraph", widget: text }
+          - { name: ukraineP2, label: "Ukraine — second paragraph", widget: text }
+          - { name: ukraineButton, label: "Ukraine — button", widget: string }
+          - { name: quoteText, label: "Quote band — text", widget: text }
+          - { name: quoteCite, label: "Quote band — attribution", widget: string }
+          - { name: ctaEyebrow, label: "Closing block — small line", widget: string }
+          - { name: ctaTitle, label: "Closing block — title", widget: string }
+          - { name: ctaLede, label: "Closing block — text", widget: text }
+          - { name: ctaB1, label: "Closing block — first button", widget: string }
+          - { name: ctaB2, label: "Closing block — second button", widget: string }
+
+      - name: about
+        label: About Us
+        file: content/about.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroLede, label: "Banner — intro", widget: text }
+          - { name: introImage, label: "Opening image", widget: image }
+          - { name: introAlt, label: "Opening image description", widget: string }
+          - { name: introEyebrow, label: "Opening — small line", widget: string }
+          - { name: introTitle, label: "Opening — title", widget: string }
+          - { name: introLead, label: "Opening — lead paragraph", widget: text }
+          - { name: introParagraphs, label: "Opening — paragraphs", widget: list, field: { name: p, label: Paragraph, widget: text } }
+          - { name: valuesEyebrow, label: "Principles — small line", widget: string }
+          - { name: valuesTitle, label: "Principles — title", widget: string }
+          - name: values
+            label: Principles
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: icon, label: Icon, widget: hidden }
+          - { name: doEyebrow, label: "What we do — small line", widget: string }
+          - { name: doTitle, label: "What we do — title", widget: string }
+          - name: doSections
+            label: "What we do — sections"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: paragraphs, label: Paragraphs, widget: list, field: { name: p, label: Paragraph, widget: text } }
+          - { name: doBullets, label: "What we do — bullet list", widget: list, field: { name: item, label: Point, widget: string } }
+          - { name: doButton, label: "What we do — button", widget: string }
+          - { name: boardEyebrow, label: "Board — small line", widget: string }
+          - { name: boardTitle, label: "Board — title", widget: string }
+          - { name: boardLede, label: "Board — intro", widget: text }
+          - name: board
+            label: "Board members"
+            widget: list
+            summary: "{{fields.country}} — {{fields.role}}"
+            fields:
+              - { name: country, label: Country, widget: string }
+              - { name: role, label: "Role on the board", widget: string }
+              - { name: text, label: Description, widget: text }
+          - { name: boardNote, label: "Board — note underneath", widget: text }
+          - { name: pullQuote, label: "Closing quote", widget: text }
+          - { name: pullQuoteCite, label: "Closing quote — attribution", widget: string }
+
+      - name: history
+        label: History
+        file: content/history.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroLede, label: "Banner — intro", widget: text }
+          - name: entries
+            label: "Timeline entries"
+            widget: list
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - { name: id, label: "Anchor (letters and hyphens, used in links)", widget: string }
+              - { name: year, label: Year, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: image, label: Photograph, widget: image }
+              - { name: alt, label: "Photograph description (for screen readers)", widget: string }
+              - { name: caption, label: "Caption shown when the photo is enlarged", widget: string }
+              - { name: paragraphs, label: Paragraphs, widget: list, field: { name: p, label: Paragraph, widget: text } }
+              - { name: quote, label: Quotation, widget: text, required: false }
+              - { name: quoteCite, label: "Quotation — attribution", widget: string, required: false }
+              - { name: extraImage, label: "Second photograph", widget: image, required: false }
+              - { name: extraAlt, label: "Second photograph — description", widget: string, required: false }
+              - { name: extraCaption, label: "Second photograph — caption", widget: string, required: false }
+          - { name: pullQuote, label: "Closing quote", widget: text }
+          - { name: pullQuoteCite, label: "Closing quote — attribution", widget: string }
+          - { name: ctaEyebrow, label: "Closing block — small line", widget: string }
+          - { name: ctaTitle, label: "Closing block — title", widget: string }
+          - { name: ctaText, label: "Closing block — text", widget: text }
+          - { name: ctaButton, label: "Closing block — button", widget: string }
+
+      - name: resources
+        label: "Resources & Legal Base"
+        file: content/resources.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroLede, label: "Banner — intro", widget: text }
+          - { name: usEyebrow, label: "USA — small line", widget: string }
+          - { name: usTitle, label: "USA — title", widget: string }
+          - { name: usImage, label: "USA — image", widget: image }
+          - { name: usAlt, label: "USA — image description", widget: string }
+          - { name: usParagraphs, label: "USA — paragraphs", widget: list, field: { name: p, label: Paragraph, widget: text } }
+          - name: usDates
+            label: "USA — dated list"
+            widget: list
+            summary: "{{fields.date}}"
+            fields:
+              - { name: date, label: Date, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: lawEyebrow, label: "Public Law — small line", widget: string }
+          - { name: lawTitle, label: "Public Law — title", widget: string }
+          - { name: lawImage, label: "Public Law — photograph", widget: image }
+          - { name: lawAlt, label: "Public Law — photograph description", widget: string }
+          - { name: lawBadgeDate, label: "Public Law — badge date", widget: string }
+          - { name: lawBadgeText, label: "Public Law — badge text", widget: string }
+          - { name: lawParagraphs, label: "Public Law — paragraphs", widget: list, field: { name: p, label: Paragraph, widget: text } }
+          - { name: lawScanImage, label: "Public Law — scan of the document", widget: image }
+          - { name: lawScanAlt, label: "Scan — description", widget: string }
+          - { name: lawScanCaption, label: "Scan — caption", widget: string }
+          - { name: uaEyebrow, label: "Ukraine — small line", widget: string }
+          - { name: uaTitle, label: "Ukraine — title", widget: string }
+          - { name: uaImage, label: "Ukraine — scan of the resolution", widget: image }
+          - { name: uaAlt, label: "Ukraine — scan description", widget: string }
+          - { name: uaCaption, label: "Ukraine — scan caption", widget: string }
+          - { name: uaBadgeDate, label: "Ukraine — badge date", widget: string }
+          - { name: uaBadgeText, label: "Ukraine — badge text", widget: string }
+          - { name: uaLead, label: "Ukraine — lead paragraph", widget: text }
+          - { name: uaParagraphs, label: "Ukraine — paragraphs", widget: list, field: { name: p, label: Paragraph, widget: text } }
+          - { name: uaButton, label: "Ukraine — button", widget: string }
+          - { name: stepsEyebrow, label: "Steps — small line", widget: string }
+          - { name: stepsTitle, label: "Steps — title", widget: string }
+          - { name: stepsLede, label: "Steps — intro", widget: text }
+          - { name: steps, label: "The seven steps", widget: list, field: { name: step, label: Step, widget: string } }
+          - { name: downloadsEyebrow, label: "Downloads — small line", widget: string }
+          - { name: downloadsTitle, label: "Downloads — title", widget: string }
+          - { name: downloadsLede, label: "Downloads — intro", widget: text }
+          - name: downloads
+            label: "Download cards"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: tag, label: "Small label", widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: link, label: Link, widget: string }
+              - { name: linkLabel, label: "Link text", widget: string }
+          - { name: ctaEyebrow, label: "Closing block — small line", widget: string }
+          - { name: ctaTitle, label: "Closing block — title", widget: string }
+          - { name: ctaText, label: "Closing block — text", widget: text }
+          - { name: ctaButton, label: "Closing block — button", widget: string }
+
+      - name: faq
+        label: FAQ
+        file: content/faq.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroLede, label: "Banner — intro", widget: text }
+          - name: items
+            label: "Questions and answers"
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+          - { name: ctaEyebrow, label: "Closing block — small line", widget: string }
+          - { name: ctaTitle, label: "Closing block — title", widget: string }
+          - { name: ctaText, label: "Closing block — text", widget: text }
+          - { name: ctaButton, label: "Closing block — button", widget: string }
+
+      - name: contact
+        label: Contact
+        file: content/contact.json
+        format: json
+        fields:
+          - { name: title, label: "Browser tab title", widget: string }
+          - { name: description, label: "Search-engine description", widget: text }
+          - { name: heroTitle, label: "Banner — title", widget: string }
+          - { name: heroLede, label: "Banner — intro", widget: text }
+          - { name: cardEyebrow, label: "Contact card — small line", widget: string }
+          - { name: cardTitle, label: "Contact card — title", widget: string }
+          - { name: cardRole, label: "Contact card — subtitle", widget: string }
+          - { name: cardBoardLink, label: "Contact card — link to the board", widget: string }
+          - { name: cardNote, label: "Contact card — note", widget: text }
+          - name: blocks
+            label: "Audience blocks"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: mediaTitle, label: "Media block — title", widget: string }
+          - { name: mediaText, label: "Media block — text", widget: text }
+          - { name: mediaDownload, label: "Media block — download link", widget: string }
+          - { name: formEyebrow, label: "Form — small line", widget: string }
+          - { name: formTitle, label: "Form — title", widget: string }
+          - { name: labelName, label: "Form — name field label", widget: string }
+          - { name: labelEmail, label: "Form — email field label", widget: string }
+          - { name: labelCountry, label: "Form — country field label", widget: string }
+          - { name: labelRole, label: "Form — role field label", widget: string }
+          - { name: labelMessage, label: "Form — message field label", widget: string }
+          - { name: roleOptions, label: "Form — role choices", widget: list, field: { name: option, label: Choice, widget: string } }
+          - { name: formButton, label: "Form — button", widget: string }
+          - { name: formNote, label: "Form — note under the button", widget: text }
+          - { name: pullQuote, label: "Closing quote", widget: text }
+          - { name: pullQuoteCite, label: "Closing quote — attribution", widget: string }
+
+  - name: settings
+    label: Site-wide
+    files:
+      - name: site
+        label: "Site settings"
+        file: content/site.json
+        format: json
+        fields:
+          - { name: url, label: "Site address", widget: string }
+          - { name: siteName, label: "Name of the movement", widget: string }
+          - { name: email, label: "Contact email address", widget: string }
+          - { name: footerVerse, label: "Footer — Bible verse", widget: text }
+          - { name: footerVerseCite, label: "Footer — verse reference", widget: string }
+          - { name: footerTagline, label: "Footer — closing line", widget: string }

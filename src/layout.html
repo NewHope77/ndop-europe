@@ -7,7 +7,7 @@
 <meta name="description" content="{{description}}">
 <link rel="canonical" href="{{canonical}}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="The National Days of Prayer Movement in Europe">
+<meta property="og:site_name" content="{{siteName}}">
 <meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:image" content="assets/img/hero-europe-cross.jpg">
@@ -33,10 +33,10 @@
 {
   "@context":"https://schema.org",
   "@type":"Organization",
-  "name":"The National Days of Prayer Movement in Europe",
+  "name":"{{siteName}}",
   "description":"A movement encouraging the establishment of a National Day of Prayer at the country level in every European country.",
   "areaServed":"Europe",
-  "email":"info@nationaldayofprayer.eu"
+  "email":"{{email}}"
 }
 </script>
 </head>
@@ -105,9 +105,8 @@
           </span>
         </a>
         <p class="footer-verse">
-          “… if my people, who are called by my name, humble themselves and pray, and seek my face,
-          and turn from their wicked ways, then I will hear from heaven and forgive their sin, and heal their land.”
-          <cite>Bible, 2 Chronicles 7:14</cite>
+          {{footerVerse}}
+          <cite>{{footerVerseCite}}</cite>
         </p>
       </div>
       <div>
@@ -123,14 +122,14 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="about.html#board">International Board</a></li>
-          <li><a href="mailto:info@nationaldayofprayer.eu">info@nationaldayofprayer.eu</a></li>
+          <li><a href="mailto:{{email}}">{{email}}</a></li>
           <li><a href="assets/docs/ndop-in-europe-brochure.pdf" download>Download the brochure (PDF)</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> The National Days of Prayer Movement in Europe</span>
-      <span>Uniting Europe in prayer for its nations, freedom and peace.</span>
+      <span>{{footerTagline}}</span>
     </div>
   </div>
 </footer>

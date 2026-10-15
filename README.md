@@ -87,16 +87,47 @@ To add a language later:
 
 Missing keys fall back to the English already in the HTML.
 
-## Building
+## How the site is put together
 
-Pages are assembled from `src/layout.html` plus the fragments in `src/pages/`, so
-the header, navigation and footer exist in one place only. No dependencies.
+Three layers, so that words can be changed without touching markup:
+
+| | | |
+|---|---|---|
+| `content/*.json` | the words and pictures | edited by the client through `/admin` |
+| `src/pages/*.html` | the shape of each page | edited by a developer |
+| `src/layout.html` | head, header, footer | edited by a developer |
+
+`build.py` renders the templates with the content and writes the finished pages
+to the repo root. It has no dependencies — a tiny substitution engine does the
+work:
+
+- `{{ field }}` — insert a value
+- `{{#list}} … {{/list}}` — repeat for each item; a list of plain strings is
+  addressed as `{{value}}` inside the block
+- `{{?field}} … {{/?field}}` — include only when the field has a value
 
 ```bash
-python3 build.py     # regenerates the *.html in the repo root, plus sitemap.xml and robots.txt
+python3 build.py     # regenerates the *.html in the root, plus sitemap.xml and robots.txt
 ```
 
-Edit `src/pages/*.html` — never the generated files in the root.
+Never edit the generated `*.html` in the root — the next build overwrites it.
+
+## Editing the content (for the client)
+
+`/admin` is an editing interface ([Sveltia CMS](https://github.com/sveltia/sveltia-cms),
+configured in `admin/config.yml`). The editor signs in with a GitHub account,
+picks a page, changes text or uploads a photograph, and presses Save. That
+commits to `main`, which rebuilds and republishes the site.
+
+Only content is exposed there — no layout, no styling, no code. When adding a
+field to `content/*.json`, add it to `admin/config.yml` too, or the client will
+not see it.
+
+Images uploaded through the CMS land in `assets/img`. Ask the client to keep
+them under roughly 500 KB; nothing enforces it.
+
+The admin page needs a GitHub OAuth endpoint to sign in. On Cloudflare that is
+the `sveltia-cms-auth` worker; it is free and takes a few minutes to deploy.
 
 To preview locally:
 
