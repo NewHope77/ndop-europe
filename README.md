@@ -115,9 +115,10 @@ present so that Jekyll does not touch the assets.
   remit (United States, Poland, Germany, Austria, Ukraine, United Kingdom) with
   no personal names, since none were supplied. Add each name where its seat is
   described, once the member has agreed to be named.
-- **Corporate email address.** `info@ndop-europe.org` is a placeholder used in
-  the page copy, the footer, the JSON-LD block and `assets/js/main.js`. Register
-  the movement's own domain and replace it in those four places.
+- **A mailbox for `info@nationaldayofprayer.eu`.** The address is now used in the
+  page copy, the footer, the JSON-LD block and `assets/js/main.js`. The domain's
+  MX already points at `mail.imena.com.ua`, but the mailbox itself still has to
+  be created in the imena.ua panel — until it exists, mail to it bounces.
 - **Contact form** — it currently opens the visitor's email client (`mailto:`), so
   the site needs no backend. Point it at Formspree, Netlify Forms or a small
   endpoint when server-side delivery is wanted.
