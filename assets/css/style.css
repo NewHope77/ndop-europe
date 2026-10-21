@@ -87,6 +87,12 @@ ul{margin:0;padding:0}
 .center{text-align:center}
 .center .eyebrow{justify-content:center}
 .center .eyebrow::before{content:"";flex:0 0 44px;height:1px;background:currentColor;opacity:.45}
+/* Both classes sit on the same element — <div class="section-head center"> —
+   so the descendant form below never matched and the block stayed against the
+   left edge of the wrap while its text was centred inside it. Keep both: the
+   first for the markup as written, the second in case a heading is ever nested
+   inside a centred block. */
+.section-head.center,
 .center .section-head{margin-inline:auto}
 
 /* Decorative rule from the brochure: dot — line — dot */
