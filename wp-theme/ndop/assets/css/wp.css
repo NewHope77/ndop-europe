@@ -41,23 +41,33 @@
 .mission__map { margin: 0; }
 .mission__map img { width: 100%; height: auto; }
 
-/* --- Lists ----------------------------------------------------------------
-   core/list adds .wp-block-list and the block library indents it. The three
-   benefit columns draw their own markers. */
-.benefit ul.wp-block-list,
-.benefit ol.wp-block-list { padding-left: 0; margin: 0; }
+/* --- Lists and headings ----------------------------------------------------
+   Nothing here either, deliberately.
+
+   style.css already says `ul { margin: 0; padding: 0 }` and
+   `h1,h2,h3,h4 { margin: 0 }`, so a list or a heading arriving as a block has
+   the design's own spacing from the start. Two rules were added here to pin
+   that down and one of them did real damage: `h3.wp-block-heading { margin-top:
+   0 }` has the same weight as `.prose h3 { margin: 2em 0 .6em }` and loads
+   after it, so every sub-heading inside a prose column lost the space above it.
+
+   A block carries extra classes; it is still the same element. Style the
+   element the design knows about, never the block's class. */
 
 /* --- Groups ---------------------------------------------------------------
-   Sections and wrappers are core/group blocks. The block library leaves them
-   alone, but a stray margin from a future WordPress release would show up as a
-   gap between bands of colour. */
-.wp-block-group { margin: 0; }
+   Nothing is declared for .wp-block-group, and nothing should be.
 
-/* --- Headings -------------------------------------------------------------
-   .wp-block-heading carries no styling of its own; it is pinned here so that a
-   heading keeps the margins the design gives it rather than a block default. */
-h1.wp-block-heading, h2.wp-block-heading, h3.wp-block-heading,
-h4.wp-block-heading, h5.wp-block-heading, h6.wp-block-heading { margin-top: 0; }
+   A blanket `.wp-block-group { margin: 0 }` was here as a guard against some
+   future WordPress release adding spacing between the bands. It did far more
+   than that: every container in this design is now also a group block, and
+   .wrap, .hero__inner, .mission__inner and .pullquote all centre themselves
+   with `margin-inline: auto`. The guard has the same specificity and loads
+   later, so it won zeroed those margins and pushed the whole page against the
+   left edge — while the masthead and the footer, which are templates rather
+   than blocks, stayed centred and hid how wrong it looked.
+
+   If spacing between sections ever does appear, name the section that has it
+   and fix that one. Never style .wp-block-group as a whole. */
 
 /* --- The admin bar --------------------------------------------------------
    Only ever seen by whoever is signed in. Without this the sticky masthead
