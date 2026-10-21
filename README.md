@@ -73,6 +73,62 @@ projection, with the brochure's Europe map behind it as an `<image>` placed by
 measuring that map's own projection — so if you change the projection bounds in
 `marathon.js`, update the `<image>` geometry in the page to match.
 
+## The WordPress theme
+
+The movement's owner asked for WordPress, so the same site is also a theme in
+`wp-theme/`. It is not a port: the design system in `assets/css/style.css` is
+shared **unchanged** between the two, and the words come from the same
+`content/*.json`. Everything WordPress makes necessary lives in one extra file,
+`wp-theme/ndop/assets/css/wp.css`.
+
+| | |
+|---|---|
+| `wp-theme/ndop/` | the theme — templates, `functions.php`, `theme.json` |
+| `wp-theme/blocks.py` | writes Gutenberg block markup |
+| `wp-theme/pages_*.py` | one module per page |
+| `wp-theme/build.py` | content -> `pages/*.html`, `inc/meta.php`, `inc/captions.php` |
+| `wp-theme/pack.sh` | assembles the theme and zips it for upload |
+
+```bash
+cd wp-theme && ./pack.sh     # -> ndop.zip
+```
+
+Only sources are in git. The photographs, the brochure, `style.css`, `main.js`
+and everything `build.py` writes are assembled by `pack.sh` from files that are
+already in the repository, so there is never a second copy to drift.
+
+Install the zip through **Appearance -> Themes -> Upload**. On activation the
+theme imports the photographs into the media library and creates the six pages
+itself (`inc/setup.php`), which is why the move can be repeated on the live
+domain with the same result. **Tools -> NDOP content** runs it again; a second
+button there rewrites the pages from the theme, discarding any editing.
+
+### What the client can change
+
+Page content is ordinary Gutenberg blocks, so a page is edited by clicking the
+text on it. Every section carries `lock: {move, remove}`, and arrangements that
+have to stay put — the three benefit columns, a card row, a timeline entry —
+carry `templateLock: all`. Words and photographs can change; the layout cannot.
+The footer verse sits in the Customizer, under **Footer**.
+
+### Four things that will bite whoever edits this next
+
+- **`theme.json` is not optional.** Without it WordPress wraps the contents of
+  every group block in `.wp-block-group__inner-container`, that wrapper becomes
+  the only child of each grid, and every row collapses into one column. The file
+  also switches `blockGap` off, which otherwise adds 24px between everything.
+- **A core image block is a `<figure>`.** Inside the fixed-height card plate the
+  figure is removed from the box tree with `display:contents`, so the picture is
+  the grid item again and `max-height` still means what it meant before.
+- **Saved block markup must be exactly what the block would save.** An extra
+  `loading` attribute, or an `anchor` attribute without the matching `id="…"`,
+  and the client is shown "this block contains unexpected or invalid content".
+  That is why `data-lightbox` is not stored in the page: a container asks for it
+  with the class `is-zoomable` and `ndop_mark_zoomable_images()` adds it while
+  the page renders, with the caption read from the media library.
+- **LiteSpeed Cache serves the old page.** Purge it, or add a query string, or
+  you will check a change that never reached you.
+
 ## Multilingual readiness
 
 The site ships in English and English lives in the markup, so pages stay readable

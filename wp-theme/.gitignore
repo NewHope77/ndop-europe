@@ -1,0 +1,19 @@
+# Everything here is produced by pack.sh from sources that are already in the
+# repository. Keeping it out of git avoids a second copy of the brochure and of
+# all twenty-three photographs, and makes it impossible for the two copies to
+# drift apart. To rebuild: ./pack.sh
+
+# Copied in from ../assets
+ndop/assets/css/style.css
+ndop/assets/js/
+ndop/assets/img/
+ndop/assets/docs/
+
+# Written by build.py
+pages/
+ndop/pages/
+ndop/inc/meta.php
+ndop/inc/captions.php
+
+# The upload itself
+*.zip

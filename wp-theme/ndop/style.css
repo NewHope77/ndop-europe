@@ -1,0 +1,16 @@
+/*
+Theme Name: NDOP Europe
+Theme URI: https://nationaldayofprayer.eu/
+Author: Built for The National Days of Prayer Movement in Europe
+Description: The movement's own theme. The design comes from the printed brochure: navy, accent blue and warm paper, the dot-line-dot rule, EB Garamond headings over Inter. Light and dark themes, no image is ever cropped. Page content is edited as Gutenberg blocks; the header and footer live in the theme's templates.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 7.4
+License: Proprietary — all rights reserved by the movement
+Text Domain: ndop
+
+The real stylesheet is assets/css/style.css. This file carries only the theme
+header, which WordPress requires here and nowhere else. Do not add rules below:
+they would load before the design system and lose to it anyway.
+*/

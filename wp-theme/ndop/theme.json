@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "useRootPaddingAwareAlignments": false,
+
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1200px"
+    },
+
+    "spacing": {
+      "blockGap": null,
+      "margin": false,
+      "padding": false,
+      "customSpacingSize": false
+    },
+
+    "color": {
+      "background": false,
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "link": false,
+      "text": false,
+      "palette": [
+        { "name": "Navy",   "slug": "navy",   "color": "#0C335B" },
+        { "name": "Accent", "slug": "accent", "color": "#0389C3" },
+        { "name": "Paper",  "slug": "paper",  "color": "#FBFAF7" },
+        { "name": "Ink",    "slug": "ink",    "color": "#1B2733" }
+      ]
+    },
+
+    "typography": {
+      "customFontSize": false,
+      "defaultFontSizes": false,
+      "dropCap": false,
+      "fontStyle": false,
+      "fontWeight": false,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textDecoration": false,
+      "textTransform": false,
+      "fontSizes": []
+    },
+
+    "border": {
+      "color": false,
+      "radius": false,
+      "style": false,
+      "width": false
+    },
+
+    "shadow": { "defaultPresets": false, "presets": [] },
+
+    "dimensions": { "minHeight": false },
+
+    "background": { "backgroundImage": false, "backgroundSize": false }
+  },
+
+  "styles": {}
+}

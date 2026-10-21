@@ -1,0 +1,32 @@
+/* ==========================================================================
+   The editing canvas
+
+   The client edits the page on the page: the same typefaces, the same colours,
+   the same navy bands. What differs from the live site is only what has to —
+   the canvas has no masthead above it and no footer below, so the bands that
+   run edge to edge need their width back.
+   ========================================================================== */
+
+.editor-styles-wrapper { background: var(--paper); }
+
+/* The editor gives every block its own container; the design expects sections
+   to span the full width of the canvas. */
+.editor-styles-wrapper .wp-block { max-width: none; }
+
+/* A section is a band of the page. In the editor it is also something the
+   client clicks on, so give it an edge they can see when they do. */
+.editor-styles-wrapper section.wp-block-group { position: relative; }
+.editor-styles-wrapper section.wp-block-group.is-selected::after,
+.editor-styles-wrapper section.wp-block-group.has-child-selected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  opacity: .5;
+}
+
+/* Animations belong to the finished page. In the editor they would hide the
+   very text the client came to change. */
+.editor-styles-wrapper .reveal { opacity: 1; transform: none; }

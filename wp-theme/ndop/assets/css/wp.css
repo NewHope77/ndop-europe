@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Where WordPress and the design meet
+
+   style.css is shared, byte for byte, with the static build of this site and
+   must stay that way. Everything here exists only because WordPress wraps a
+   picture in <figure> and gives its blocks classes of their own. Each rule
+   below hands the layout back to the stylesheet; none of them introduces a
+   look that is not already there.
+
+   Nothing in this file crops an image.
+   ========================================================================== */
+
+/* --- Pictures -------------------------------------------------------------
+   A core image block is <figure class="wp-block-image"><img></figure>. The
+   stylesheet addresses the img through its container, so the figure simply has
+   to disappear: no margin of its own, and the same box the img used to have. */
+
+.wp-block-image { margin: 0; }
+.wp-block-image img { display: block; }
+
+/* The card plate is a grid of fixed height, and the picture used to be the
+   grid item itself — which is how max-height:100% knew what 100% meant. Put a
+   figure in between and the row grows to the picture's natural height instead,
+   so a 1379px photograph is drawn inside a 245px plate and the bottom three
+   quarters of it are clipped away. Invisible on a landscape crop, fatal on a
+   portrait.
+
+   display:contents removes the figure's box while leaving the element in the
+   document, so the picture is the grid item again and the plate behaves
+   exactly as it did before WordPress was involved. */
+.card__media .wp-block-image { display: contents; }
+
+/* The timeline's plate is not a grid — there the picture simply fills the
+   width, so the figure only has to stop being a figure-shaped box. */
+.tl-card__media .wp-block-image { display: block; width: 100%; }
+
+.feature__media .wp-block-image { margin: 0; width: 100%; }
+
+/* The faint map behind the mission statement. The class now sits on the figure,
+   which carries the placement; the picture inside simply fills it. */
+.mission__map { margin: 0; }
+.mission__map img { width: 100%; height: auto; }
+
+/* --- Lists ----------------------------------------------------------------
+   core/list adds .wp-block-list and the block library indents it. The three
+   benefit columns draw their own markers. */
+.benefit ul.wp-block-list,
+.benefit ol.wp-block-list { padding-left: 0; margin: 0; }
+
+/* --- Groups ---------------------------------------------------------------
+   Sections and wrappers are core/group blocks. The block library leaves them
+   alone, but a stray margin from a future WordPress release would show up as a
+   gap between bands of colour. */
+.wp-block-group { margin: 0; }
+
+/* --- Headings -------------------------------------------------------------
+   .wp-block-heading carries no styling of its own; it is pinned here so that a
+   heading keeps the margins the design gives it rather than a block default. */
+h1.wp-block-heading, h2.wp-block-heading, h3.wp-block-heading,
+h4.wp-block-heading, h5.wp-block-heading, h6.wp-block-heading { margin-top: 0; }
+
+/* --- The admin bar --------------------------------------------------------
+   Only ever seen by whoever is signed in. Without this the sticky masthead
+   hides behind WordPress's own bar. */
+body.admin-bar .site-header { top: 32px; }
+@media screen and (max-width: 782px) {
+  body.admin-bar .site-header { top: 46px; }
+}
+
+/* --- The timeline's second picture ----------------------------------------
+   Two inline styles from the static build, moved to classes so the markup
+   stays valid block markup. The values are unchanged. */
+.tl-card__extra { margin-top: 20px; }
+.tl-card__media--extra { border-radius: 2px; }
+
+/* The scan of the American law sits below the text that describes it. */
+.feature__media--inset { margin-top: 26px; }
+
+/* --- Contact --------------------------------------------------------------
+   Two inline styles from the static build, as classes. Same values. */
+.coordinator--single { grid-template-columns: 1fr; }
+.contact-block__text { color: var(--ink-2); }
+.coordinator__note { margin: 18px 0 0; font-size: .9rem; color: var(--muted); }
