@@ -118,7 +118,9 @@ def build(c, url):
     def card(item):
         return group(
             [
-                group([image(item["image"], item["alt"])], cls="card__media"),
+                group([image(item["image"], item["alt"])],
+                    cls="card__media",
+                    template_lock=False),
                 group(
                     [
                         raw(f'<span class="tl-year">{item["year"]}</span>'),
@@ -176,7 +178,7 @@ def build(c, url):
                                     ),
                                 ],
                                 cls="feature__media feature__media--frame",
-                                template_lock="all",
+                                template_lock=False,
                             ),
                             group(
                                 [

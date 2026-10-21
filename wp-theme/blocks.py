@@ -40,7 +40,11 @@ def group(children, tag="div", cls="", lock=None, template_lock=None, extra=None
         attrs["className"] = cls
     if lock:
         attrs["lock"] = lock
-    if template_lock:
+    # `False` is meaningful, not absence: templateLock inherits down the tree,
+    # so a container holding a photograph must say false out loud to break the
+    # lock its card and grid would otherwise pass down, or a click can never
+    # reach the picture.
+    if template_lock is not None:
         attrs["templateLock"] = template_lock
     if extra:
         attrs.update(extra)
@@ -108,7 +112,11 @@ def image(src, alt, cls="", zoomable=False, lazy=None):
     name = src.split("/")[-1]
     ident = f"__IMG_ID:{name}__"
 
-    attrs = {"id": ident, "sizeSlug": "full", "linkDestination": "none"}
+    # Locked against being moved or deleted, but left selectable: a click on
+    # the photograph must reach the photograph, or the client cannot swap it
+    # without hunting through the block list.
+    attrs = {"id": ident, "sizeSlug": "full", "linkDestination": "none",
+             "lock": {"move": True, "remove": True}}
     if cls:
         attrs["className"] = cls
 

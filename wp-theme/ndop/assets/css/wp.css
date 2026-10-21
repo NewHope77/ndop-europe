@@ -18,20 +18,22 @@
 .wp-block-image { margin: 0; }
 .wp-block-image img { display: block; }
 
-/* The card plate is a grid of fixed height, and the picture used to be the
+/* The card plate is a grid of a fixed height, and the picture used to be the
    grid item itself — which is how max-height:100% knew what 100% meant. Put a
-   figure in between and the row grows to the picture's natural height instead,
-   so a 1379px photograph is drawn inside a 245px plate and the bottom three
-   quarters of it are clipped away. Invisible on a landscape crop, fatal on a
-   portrait.
+   figure in between and the picture is drawn at its natural height inside a
+   245px plate, with the rest clipped away: Churchill loses a third of himself.
 
-   display:contents removes the figure's box while leaving the element in the
-   document, so the picture is the grid item again and the plate behaves
-   exactly as it did before WordPress was involved. */
+   display:contents removes the figure's box, so the picture is the grid item
+   again and the plate behaves as it did before WordPress was involved.
+
+   It costs one thing: an element with no box cannot be clicked, so in the
+   editor a click on the photograph lands on the plate instead. That is put
+   right in editor.css, which only the editing canvas loads — the published
+   page keeps the arrangement that renders correctly. */
 .card__media .wp-block-image { display: contents; }
 
-/* The timeline's plate is not a grid — there the picture simply fills the
-   width, so the figure only has to stop being a figure-shaped box. */
+/* The timeline's plate has no fixed height — there the picture simply fills
+   the width, so the figure only has to stop being a figure-shaped box. */
 .tl-card__media .wp-block-image { display: block; width: 100%; }
 
 .feature__media .wp-block-image { margin: 0; width: 100%; }

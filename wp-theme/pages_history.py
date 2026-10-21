@@ -36,7 +36,7 @@ def entry(e):
                     group(
                         [image(e["extraImage"], e["extraAlt"])],
                         cls="tl-card__media tl-card__media--extra is-zoomable",
-                        template_lock="all",
+                        template_lock=False,
                     )
                 ],
                 cls="tl-card__extra",
@@ -51,7 +51,7 @@ def entry(e):
                     group(
                         [image(e["image"], e["alt"])],
                         cls="tl-card__media is-zoomable",
-                        template_lock="all",
+                        template_lock=False,
                     ),
                     group(body, cls="tl-card__body"),
                 ],

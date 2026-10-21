@@ -30,3 +30,37 @@
 /* Animations belong to the finished page. In the editor they would hide the
    very text the client came to change. */
 .editor-styles-wrapper .reveal { opacity: 1; transform: none; }
+
+
+/* --- Photographs have to be clickable ------------------------------------
+   On the published page the figure around a picture is taken out of the box
+   tree (wp.css) so that the card plate can constrain the picture instead of
+   being stretched by it. A box-less element cannot be clicked, though, and in
+   here that matters more than anywhere: a click on a photograph has to reach
+   the photograph, or the client cannot swap it without hunting through the
+   block list.
+
+   So in the editing canvas, and only here, the figure gets a real box the size
+   of the plate. The picture is still fitted inside it whole — same rules, same
+   result on screen — but now there is something to click. */
+.editor-styles-wrapper .card__media .wp-block-image {
+  display: grid;
+  /* The same trick as the plate itself: without a definite row the figure's
+     row grows to the picture's own height, the percentage below has nothing
+     to measure against, and the picture spills out of the plate again — the
+     identical bug, one level further down. */
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.editor-styles-wrapper .card__media .wp-block-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

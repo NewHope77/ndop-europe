@@ -63,7 +63,7 @@ def build(c, url):
                                     ),
                                 ],
                                 cls="feature__media reveal",
-                                template_lock="all",
+                                template_lock=False,
                             ),
                             group(
                                 [
@@ -75,7 +75,7 @@ def build(c, url):
                                             image(c["lawScanImage"], c["lawScanAlt"])
                                         ],
                                         cls="feature__media feature__media--frame feature__media--inset is-zoomable",
-                                        template_lock="all",
+                                        template_lock=False,
                                     ),
                                 ],
                                 cls="feature__body prose reveal",
@@ -108,7 +108,7 @@ def build(c, url):
                                     ),
                                 ],
                                 cls="feature__media feature__media--frame reveal is-zoomable",
-                                template_lock="all",
+                                template_lock=False,
                             ),
                             group(
                                 [
