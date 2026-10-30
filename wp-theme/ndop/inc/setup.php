@@ -212,7 +212,7 @@ function ndop_ensure_caption( $id, $name ) {
 	}
 }
 
-/** "rada-resolution.jpg" reads better in the library as "Rada resolution". */
+/** "reagan-signing.jpg" reads better in the library as "Reagan signing". */
 function ndop_image_title( $name ) {
 	$base = preg_replace( '/\.[a-z0-9]+$/i', '', $name );
 	return ucfirst( str_replace( array( '-', '_' ), ' ', $base ) );
